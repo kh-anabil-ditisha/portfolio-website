@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top left, #1d2671, #0f2027, #000);
+  color: white;
+  transition: 0.4s;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 30, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0, 255, 255, 0.2);
+}
+
+nav {
+  padding: 15px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 26px;
+}
+
+.logo span {
+  color: #00eaff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #00eaff;
+}
+
+#darkBtn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+section {
+  min-height: 100vh;
+  padding: 100px 8%;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.welcome {
+  color: #00eaff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.home-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.home-text h1 span {
+  color: #ffdd00;
+}
+
+.home-text h3 {
+  color: #00eaff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.home-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 28px;
+  background: linear-gradient(90deg, #00eaff, #7b2ff7);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #00eaff;
+}
+
+.profile-box {
+  padding: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00eaff, #7b2ff7, #ff0080);
+  box-shadow: 0 0 40px rgba(0, 234, 255, 0.6);
+}
+
+.profile-box img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  display: block;
+  background: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 45px;
+  color: #00eaff;
+}
+
+.glass-box,
+.timeline-card,
+.project-card,
+form {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.glass-box {
+  max-width: 850px;
+  margin: auto;
+  padding: 35px;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.timeline {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  gap: 25px;
+}
+
+.timeline-card {
+  padding: 28px;
+  border-left: 5px solid #00eaff;
+}
+
+.timeline-card h3 {
+  color: #ffdd00;
+  margin-bottom: 8px;
+}
+
+.timeline-card span {
+  color: #00eaff;
+  font-weight: bold;
+}
+
+/* Updated Skills Section */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill-category {
+  width: 380px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.20);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  transition: 0.4s;
+}
+
+.skill-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0,234,255,0.4);
+}
+
+.skill-icon {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skill-category h3 {
+  text-align: center;
+  color: #ffdd00;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skill-tags span {
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: rgba(0,234,255,0.15);
+  border: 1px solid rgba(0,234,255,0.4);
+  color: #00eaff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.skill-tags span:hover {
+  background: #00eaff;
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #00eaff;
+}
+
+.project-container,
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.certificate-card {
+  background: rgba(255,255,255,0.13);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: 0.3s;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+.certificate-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 30px rgba(0,234,255,0.5);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  background: white;
+}
+
+.cert-info {
+  padding: 20px;
+}
+
+.cert-info h3 {
+  color: #ffdd00;
+  margin-bottom: 10px;
+}
+
+.project-card {
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0,234,255,0.5);
+}
+
+.project-card h3 {
+  color: #ffdd00;
+  margin-bottom: 12px;
+}
+
+form {
+  max-width: 650px;
+  margin: auto;
+  padding: 30px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+form textarea {
+  height: 130px;
+  resize: none;
+}
+
+#formMsg {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#topBtn {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50%;
+  background: #00eaff;
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  background: rgba(0,0,0,0.8);
+}
+
+/* Light Mode */
+body.light {
+  background: linear-gradient(120deg, #e0f7fa, #fce4ec);
+  color: #222;
+}
+
+body.light header {
+  background: rgba(255,255,255,0.9);
+}
+
+body.light nav ul li a,
+body.light .logo {
+  color: #222;
+}
+
+body.light .glass-box,
+body.light .timeline-card,
+body.light .project-card,
+body.light form,
+body.light .certificate-card,
+body.light .skill-category {
+  background: white;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 65px;
+    right: -100%;
+    width: 230px;
+    background: #111b45;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.4s;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav ul li {
+    margin: 12px 0;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 36px;
+  }
+
+  .profile-box img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .skill-category {
+    width: 100%;
+  }
+}
